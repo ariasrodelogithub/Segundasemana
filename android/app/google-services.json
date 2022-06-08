@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "78866155338",
+    "project_id": "flutterappmauricio",
+    "storage_bucket": "flutterappmauricio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78866155338:android:b8cc62ece436846ecb63b3",
+        "android_client_info": {
+          "package_name": "com.example.snippets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78866155338-6npje7dorb8vcfutic86etdc3ee7pvpc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBYXqaadoaSL40PXEiNJ6xuEs0yFD36tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78866155338-6npje7dorb8vcfutic86etdc3ee7pvpc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
