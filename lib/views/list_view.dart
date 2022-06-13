@@ -16,6 +16,7 @@ class listview extends StatelessWidget {
   }
 
   final List<Map<String, dynamic>> lugares = [
+    
     {
       'image':
           'https://viajes.nationalgeographic.com.es/medio/2017/04/24/paris_fa5c2ffd.jpg',

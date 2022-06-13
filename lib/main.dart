@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Lugares Exóticos',
+      title: 'Shakira y yo ',
       home: CallFirebase()
     );
   }

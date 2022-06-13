@@ -1,4 +1,5 @@
 import 'package:snippets/Entities/Carro.dart';
+import 'package:snippets/Entities/Servicio.dart';
 
 class Registros {
   final Carro? carro;
