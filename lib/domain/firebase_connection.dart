@@ -10,18 +10,6 @@ class FirebaseConnection {
     return _database.ref('/Registros');
   }
 
-  /*void getAllRegistros() {
-    DatabaseReference _registros = instanceFirebase();
-    
-    _registros.onValue.listen((event) {
-      final registros = event.snapshot.value;
-      Map<String, dynamic> registrosJson = json.decode(registros.toString());
-      
-      ResponseFirebase reg = ResponseFirebase.fromJson(registrosJson);
-      print(reg);
-    });
-  }*/
-
   Future<ResponseFirebase> getAllRegistros() async {
     try {
       DatabaseReference _registros = instanceFirebase();

@@ -12,4 +12,7 @@ class Servicio {
       tapiceria: json['tapiceria'],
     );
   }
+  String toString() {
+    return 'servicios:\nlavado:$lavado\npolish:$polish\ntapiceria:$tapiceria';
+  }
 }
