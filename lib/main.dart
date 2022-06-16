@@ -6,6 +6,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:snippets/views/list_view.dart';
 import 'package:snippets/views/listafirebase.dart';
+import 'package:snippets/views/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,10 +20,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shakira y yo ',
-      home: CallFirebase()
+      home: Splash()
     );
   }
 }

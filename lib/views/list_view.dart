@@ -904,7 +904,7 @@ class listview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Shakira y yo '),
+          title: const Text('Lugares en los que ya estuve'),
         ),
         body: ListView.builder(
           itemCount: lugares.length, //tamaño de la lsita
