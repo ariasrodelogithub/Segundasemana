@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snippets/views/profile.dart';
 
+import 'list_view.dart';
 import 'listafirebase.dart';
 
 class Menu extends StatefulWidget {
@@ -10,37 +12,58 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuS extends State<Menu> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    CallFirebase(),
+    Profile(),
+    
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('lista de cleintes'),
-            ),
-            body: ListView(children: [
-              ListTile(
-                  leading: const Icon(Icons.account_circle),
-                  title: const Text('Client List'),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CallFirebase()));
-                  }
-                  ),
-                  const ListTile(
-                    leading: Icon(Icons.cloud_circle),
-                    title: Text('soon..'),
-                  ),
-                  const ListTile(
-                    leading:Icon(Icons.cloud_circle),
-                    title:Text('soo..'),
-
-                  ), const ListTile(
-                    leading:Icon(Icons.cloud_circle),
-                    title:Text('soo..'),
-                  )
-            ]));
+      backgroundColor: Color.fromARGB(255, 250, 252, 255),
+      appBar: AppBar(
+        title: const Text('BottomNavigationBar Sample'),
+      ),
+      body: Center(
+        
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+            backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+            backgroundColor: Colors.purple,
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
+    );
   }
 }
-
-  
