@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snippets/views/home.dart';
 import 'package:snippets/views/profile.dart';
 
 import 'list_view.dart';
@@ -16,11 +17,13 @@ class _MenuS extends State<Menu> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    Home(),
+    CallFirebase(),
     Text(
       'Index 0: Home',
       style: optionStyle,
     ),
-    CallFirebase(),
+  
     Profile(),
     
   ];
@@ -53,6 +56,11 @@ class _MenuS extends State<Menu> {
             icon: Icon(Icons.business),
             label: 'Business',
             backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+            backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
