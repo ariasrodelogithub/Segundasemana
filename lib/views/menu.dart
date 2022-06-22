@@ -19,10 +19,6 @@ class _MenuS extends State<Menu> {
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     CallFirebase(),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
   
     Profile(),
     
@@ -62,11 +58,7 @@ class _MenuS extends State<Menu> {
             label: 'School',
             backgroundColor: Colors.purple,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-            backgroundColor: Colors.purple,
-          ),
+
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],

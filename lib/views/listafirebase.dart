@@ -47,7 +47,7 @@ class _CallFirebaseState extends State<CallFirebase> {
     callDatabase();
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Shakira y yo "),
+        title: const Text("Lista de personas "),
         centerTitle: true,
       ),
       body: Center(
@@ -93,7 +93,7 @@ Widget _my_card(context, String nombre, String licencia, int cel,
     elevation: 10,
     child: Column(
       children: <Widget>[
-        Text(nombre + " " + apellido),
+        Text("$nombre $apellido"),
         Image(
           image: NetworkImage(image),
           fit: BoxFit.cover,
