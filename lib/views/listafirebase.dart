@@ -116,7 +116,7 @@ Widget _my_card(context, String nombre, String licencia, int cel,
                             carro: carro),
                       ));
                 },
-                child: Text('detalle'))
+                child: const  Text('detalle'))
           ],
         )
       ],
