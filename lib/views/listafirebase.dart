@@ -69,6 +69,7 @@ class _CallFirebaseState extends State<CallFirebase> {
           registros[index].image,
           registros[index].carro,
           registros[index].servicio,
+          registros[index].key,
         );
       },
     );
@@ -85,7 +86,7 @@ class _CallFirebaseState extends State<CallFirebase> {
 }
 
 Widget _my_card(context, String nombre, String licencia, int cel,
-    String apellido, String image, Carro carro, Servicio servicio) {
+    String apellido, String image, Carro carro, Servicio servicio, String key) {
   return Center(
       child: Card(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -106,17 +107,10 @@ Widget _my_card(context, String nombre, String licencia, int cel,
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Detalle(
-                            nombre: nombre,
-                            licencia: licencia,
-                            cel: cel,
-                            apellido: apellido,
-                            image: image,
-                            servicio: servicio,
-                            carro: carro),
+                        builder: (context) => Detalle(id:key),
                       ));
                 },
-                child: const  Text('detalle'))
+                child: const Text('detalle'))
           ],
         )
       ],

@@ -14,11 +14,26 @@ class FirebaseConnection {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-      print('-----------------------------');
-      print(response.value.runtimeType);
       final datos = Map<String, dynamic>.from(response.value as Map);
+      datos.forEach(((key, value) {
+        value['key'] = key;
+      }));
+
       final registers = ResponseFirebase.fromJson(datos.values.toList());
-      print(registers);
+      return registers;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<ResponseFirebase> get_other_register(id) async {
+    try {
+      DatabaseReference _registros = instanceFirebase();
+      DataSnapshot response = await _registros.child(id).get();
+      final datos = Map<String, dynamic>.from(response.value as Map);
+      List<dynamic> mis_datos = [];
+      mis_datos.add(datos);
+      final registers = ResponseFirebase.fromJson(mis_datos);
       return registers;
     } catch (e) {
       rethrow;
